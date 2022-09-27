@@ -1,0 +1,62 @@
+<script>
+
+</script>
+<section class="w-full relative">
+    <div class="h-screen">
+        <nav class="flex gap-24 p-10 z-10">
+            <div class="logo z-10">
+                <img src="./images/logo.svg" alt="Logo here">
+            </div>
+            <div class="links text-gray-200 text-lg py-2 z-10 sm:hidden">
+                <a href="#/" class=" p-2 px-4 active:scale-90">Home</a>
+                <a href="#/" class=" p-2 px-4 active:scale-90">Contact us</a>
+            </div>
+        </nav>
+        <div class="img absolute right-0 top-0 sm:hidden brightness-50  ">
+            <img src="./images/image 1.png" class="object-cover" alt="">
+            <img src="./images/image 4.png" class="scale-75 object-cover absolute top-[15rem]" alt="">
+    
+            <img src="./images/image 3.png" class="scale-75 object-cover absolute top-24 -left-[10rem]" alt="">
+        </div>
+        <div class="relative z-10 px-10">
+            <header class="pt-24 px-5">
+                <div class="title">
+                    <h2 class=" title-main text-4xl text-gray-200">The digital arts Commnunity</h2>
+                </div>
+                <div class="py-10">
+                    <p class="text-gray-200 max-w-[35rem] text-lg">The digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplace</p>
+                </div>
+                <div class="">
+                    <a href="#/signup" class="py-2 px-9 rounded-lg text-gray-200 bg-[#372439]">Get started</a>
+                </div>
+            </header>
+        </div>
+    </div>
+
+    <div class="px-10 py-5">
+        <header class="px-6">
+            <div class="title relative">
+                <h2 class="text-2xl text-gray-200">Contact us</h2>
+                <div class="h-1 w-8 bg-gray-300 absolute"></div>
+            </div>
+            <p class="text-gray-200 max-w-[35rem] text-lg mt-7">arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplace</p>
+        </header>
+
+        <div class="flex gap-4">
+            <form action="#">
+                <div class="">
+                    
+                </div>
+            </form>
+            <div class=" ">
+                <img src="./images/image 5.png" alt="">
+            </div>
+        </div>
+    </div>
+
+</section>
+<style>
+    .title-main {
+        font-family: 'Irish Grover', cursive;
+    }
+</style>
