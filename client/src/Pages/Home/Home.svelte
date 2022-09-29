@@ -27,7 +27,7 @@
                     <p class="text-gray-200 max-w-[35rem] text-lg">The digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplace</p>
                 </div>
                 <div class="">
-                    <a href="#/signup" class="py-2 px-9 rounded-lg text-gray-200 bg-[#372439]">Get started</a>
+                    <a href="#/signup" class="py-2 px-9 rounded-lg text-gray-200 bg-[#372439] active:scale-95">Get started</a>
                 </div>
             </header>
         </div>
@@ -42,11 +42,12 @@
             <p class="text-gray-200 max-w-[35rem] text-lg mt-7">arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplaceThe digital arts marketplace</p>
         </header>
 
-        <div class="flex gap-4">
-            <form action="#">
-                <div class="">
-                    
-                </div>
+        <div class="flex gap-4 px-6 pt-12 items-center justify-between flex-wrap sm:block">
+            <form action="#" class="w-[30em] max-w-[30rem] sm:w-full">
+                <input type="text" placeholder="Name" class="w-full bg-white rounded-lg py-2 px-3 backdrop-blur-md bg-opacity-20 text-white placeholder:text-white mt-2 outline-none focus:border focus:border-white focus:border-opacity-10" />
+                <input type="email" placeholder="Email" class="w-full bg-white rounded-lg py-2 px-3 backdrop-blur-md bg-opacity-20 text-white placeholder:text-white mt-2 outline-none focus:border focus:border-white focus:border-opacity-10" />
+                <textarea type="email" placeholder="Write message" class="w-full bg-white rounded-lg py-2 px-3 backdrop-blur-md bg-opacity-20 text-white placeholder:text-white mt-2 resize-y h-[18rem] outline-none focus:border focus:border-white focus:border-opacity-10"/>
+                <button type="submit" class="bg-[#372439] py-2 w-full text-white rounded-lg active:scale-95">Send message</button>
             </form>
             <div class=" ">
                 <img src="./images/image 5.png" alt="">
@@ -58,5 +59,8 @@
 <style>
     .title-main {
         font-family: 'Irish Grover', cursive;
+    }
+    .border-gradient{
+        background: linear-gradient(113.06deg, rgba(254, 96, 41,0.8) 0.63%, rgba(55, 31, 151,0.8) 100%);
     }
 </style>

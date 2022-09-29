@@ -1,9 +1,17 @@
 <script lang="ts">
 import Router from 'svelte-spa-router';
   import Home from './Pages/Home/Home.svelte';
+  import Login from './Pages/Login/Login.svelte';
+  import ArtPage from './Pages/Main/ArtPage.svelte';
+  import Main from './Pages/Main/Main.svelte';
+  import SignUp from './Pages/SignUp/signUp.svelte';
 
-const routes:any = {
+const routes:object = {
     '/': Home,
+    '/login':Login,
+    '/signup':SignUp,
+    '/home': Main,
+    '/home/:id': ArtPage,
   
 };
 </script>
@@ -22,6 +30,7 @@ const routes:any = {
     height: 100%;
     background: linear-gradient(113.06deg, rgba(254, 96, 41,0.8) 0.63%, rgba(55, 31, 151,0.8) 100%);
   }
+
   /* 
   .title{
     font-family: 'Irish Grover', cursive;
