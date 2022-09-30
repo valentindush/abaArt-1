@@ -4,6 +4,7 @@
     import FiMessageCircle from "svelte-icons-pack/fi/FiMessageCircle";
     import FiBell from "svelte-icons-pack/fi/FiBell";
     import FiUser from "svelte-icons-pack/fi/FiUser";
+    import AiOutlinePlus from "svelte-icons-pack/ai/AiOutlinePlus";
     import Art from "../../lib/Art.svelte";
 
     let arts:{id:string,title:string,owner:string,image:string}[]=[
@@ -132,8 +133,8 @@
 
     </div>
 
-    <button class="fixed z-50 w-[50px] h-[50px] rounded-full bg-pink-500">
-
+    <button title="Add a new art" class=" fixed top-1/2 right-12 z-50 w-[50px] h-[50px] rounded-full bg-pink-700 flex items-center justify-center shadow-xl active:scale-[.97]">
+        <Icon src={AiOutlinePlus} color="white" size="30" />
     </button>
 
 </main>
