@@ -145,13 +145,15 @@
 
     </div>
 
-    <button title="Add a new art" class=" fixed top-1/2 right-12 z-10 w-[50px] h-[50px] rounded-full bg-pink-700 flex items-center justify-center shadow-xl active:scale-[.97]">
+    <button on:click={closeAddArt} title="Add a new art" class=" fixed top-1/2 right-12 z-10 w-[50px] h-[50px] rounded-full bg-pink-700 flex items-center justify-center shadow-xl active:scale-[.97]">
         <Icon src={AiOutlinePlus} color="white" size="30" />
     </button>
     {#if showProfile}
         <Profile close={closeProfile} />
     {/if}
-    <AddArt close={closeAddArt} />
+    {#if showAddArt}
+        <AddArt close={closeAddArt} />
+    {/if}
 </main>
 
 <style>
