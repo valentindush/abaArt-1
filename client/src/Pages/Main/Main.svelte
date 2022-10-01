@@ -6,6 +6,9 @@
     import FiUser from "svelte-icons-pack/fi/FiUser";
     import AiOutlinePlus from "svelte-icons-pack/ai/AiOutlinePlus";
     import Art from "../../lib/Art.svelte";
+    import Profile from "../Profile/Profile.svelte";
+  import Login from "../Login/Login.svelte";
+  import AddArt from "./AddArt.svelte";
 
     let arts:{id:string,title:string,owner:string,image:string}[]=[
         {
@@ -53,6 +56,15 @@
     const chooseCategory = (value:string)=>{
         activeCat = value;
     }
+
+    let showProfile:boolean = false;
+    let showAddArt:boolean = false;
+    let showNotifications:boolean = false;
+
+    const closeProfile = ()=>showProfile = !showProfile;
+    const closeAddArt = ()=> showAddArt = !showAddArt
+
+
 </script>
 
 <main class="h-screen px-12 overflow-auto relative">
@@ -72,7 +84,7 @@
                 <div class="flex items-center justify-center p-3 bg-white bg-opacity-30 rounded-full w-[45px] h-[45px] cursor-pointer active:scale-[.96]">
                     <Icon src={FiBell} size="24" color="white" />
                 </div>
-                <div class="flex items-center justify-center p-3 bg-white bg-opacity-30 rounded-full w-[45px] h-[45px] cursor-pointer active:scale-[.96]">
+                <div on:click={closeProfile} class="flex items-center justify-center p-3 bg-white bg-opacity-30 rounded-full w-[45px] h-[45px] cursor-pointer active:scale-[.96]">
                     <Icon src={FiUser} size="24" color="white" />
                 </div>
             </div>
@@ -133,11 +145,19 @@
 
     </div>
 
-    <button title="Add a new art" class=" fixed top-1/2 right-12 z-50 w-[50px] h-[50px] rounded-full bg-pink-700 flex items-center justify-center shadow-xl active:scale-[.97]">
+    <button title="Add a new art" class=" fixed top-1/2 right-12 z-10 w-[50px] h-[50px] rounded-full bg-pink-700 flex items-center justify-center shadow-xl active:scale-[.97]">
         <Icon src={AiOutlinePlus} color="white" size="30" />
     </button>
-
+    {#if showProfile}
+        <Profile close={closeProfile} />
+    {/if}
+    <AddArt close={closeAddArt} />
 </main>
-<style>
 
+<style>
+.themed {
+    --border: 3px solid pink;
+    --borderRadius: 10px;
+    --placeholderColor: pink;
+  }
 </style>

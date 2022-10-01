@@ -4,14 +4,12 @@ import Home from './Pages/Home/Home.svelte';
 import Login from './Pages/Login/Login.svelte';
 import ArtPage from './Pages/Main/ArtPage.svelte';
 import Main from './Pages/Main/Main.svelte';
-import Profile from './Pages/Main/Profile.svelte';
 import SignUp from './Pages/SignUp/signUp.svelte';
 
 const routes:object = {
     '/': Home,
     '/login':Login,
     '/signup':SignUp,
-    '/profile':Profile,
     '/home': Main,
     '/home/:id': ArtPage,
   
