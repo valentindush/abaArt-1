@@ -34,8 +34,22 @@
         label: "Painting", value: "painting"
     }
 
-    const handleSelect = (e:any)=> {
+    const handleSelect = (e)=> {
         console.log(e.detail);
+    }
+
+    let isDropping:boolean = false;
+
+    const handleImgDrop = (e:any)=>{
+        isDropping = true
+
+    }
+    const handleDragLeave=()=>{
+        isDropping = false
+    }
+
+    const handleDragOver = (e)=>{
+        console.log(e.dataTransfer.files[0])
     }
 </script>
 <main class="bg-black w-screen h-screen z-40 fixed top-0 left-0 bg-opacity-70">
@@ -46,13 +60,13 @@
         <h2 class="text-3xl">Share yout art</h2>
         
         <form action="#" class="p-4">
-            <div class="pic h-[15rem] border-2 border-white border-opacity-50 rounded-md backdrop-blur-sm">
+            <div on:dragover={handleDragOver} on:dragleave={handleDragLeave} on:dragenter={handleImgDrop} class={`pic h-[15rem] border-2 border-white border-opacity-50 rounded-md backdrop-blur-sm ${isDropping?"border-pink-500 ":""}`}>
                 <label>
                     <p class="text-black p-2 cursor-pointer">Choose a photo or video to share</p>
                     <input type="file" hidden >
                 </label>
             </div>
-            <div class="bg-black mt-5 p-3 rounded-lg bg-opacity-50 pb-5">
+            <div class="bg-black mt-5 p-3 rounded-lg bg-opacity-20 pb-5">
                 <div class="">
                     <p class="text-left text-gray-200 font-normal">T i t l e</p>
                     <input type="text" placeholder="Title" class="w-full text-gray-200 font-normal bg-transparent rounded-lg py-2 px-3 backdrop-blur-md bg-opacity-20  mt-2 outline-none border" />

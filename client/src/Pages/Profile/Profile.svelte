@@ -26,13 +26,13 @@
                 </div>
             </div>
             <div class="mx-auto">
-                <div class="p-2 font-[600] flex items-center gap-2">
+                <div class="p-2 font-[500] flex items-center gap-2">
                     <label class="inline-block w-[10rem] text-lg text-left" for="username" >Username</label>
-                    <input id="username" type="text" placeholder="Username" value="Dush valentin" class=" bg-transparent border-2 outline-none p-2 px-5 botder-white rounded-xl placeholder:text-black placeholder:opacity-70 text-gray-800 block">
+                    <input id="username" type="text" placeholder="Username" value="Dush valentin" class=" bg-transparent border-2 outline-none p-2 px-5 botder-white rounded-xl font-normal placeholder:text-black placeholder:opacity-70 text-gray-800 block focus:border-pink-400">
                 </div>
-                <div class="p-2 font-[600] flex items-center gap-2">
+                <div class="p-2 font-[500] flex items-center gap-2">
                     <label  class="inline-block w-[10rem] text-lg text-left" for="email" >Email</label>
-                    <input id="email" type="email" placeholder="Username" value="Dushvalentin@gmail.com" class=" bg-transparent border-2 outline-none p-2 px-5 botder-white rounded-xl placeholder:text-black placeholder:opacity-70 text-gray-800 block">
+                    <input id="email" type="email" placeholder="Username" value="Dushvalentin@gmail.com" class=" bg-transparent border-2 outline-none p-2 px-5 botder-white rounded-xl font-normal placeholder:text-black placeholder:opacity-70 text-gray-800 block focus:border-pink-400">
                 </div>
             </div>
             <div class="mt-8 pb-2">
