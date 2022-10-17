@@ -1,4 +1,14 @@
 import { Injectable } from '@nestjs/common';
 
 @Injectable()
-export class AuthService {}
+export class AuthService {
+   async signup() {
+
+   }
+   async signin() {
+
+   }
+   async signout(){
+
+   }
+}
