@@ -7,43 +7,11 @@
     import AiOutlinePlus from "svelte-icons-pack/ai/AiOutlinePlus";
     import Art from "../../lib/Art.svelte";
     import Profile from "../Profile/Profile.svelte";
-  import Login from "../Login/Login.svelte";
-  import AddArt from "./AddArt.svelte";
+    import Login from "../Login/Login.svelte";
+    import AddArt from "./AddArt.svelte";
+    import { arts } from "../../assets/Arts";
 
-    let arts:{id:string,title:string,owner:string,image:string}[]=[
-        {
-            id: "1",
-            title: "Lion king",
-            owner: "King Arthur",
-            image: "images/art.png",
-        },
-        {
-            id: "2",
-            title: "Lion king",
-            owner: "King Arthur",
-            image: "images/art.png",
-        },
-        {
-            id: "3",
-            title: "Lion king",
-            owner: "King Arthur",
-            image: "images/art.png",
-        },
-        {
-            id: "4",
-            title: "Lion king",
-            owner: "King Arthur",
-            image: "images/art.png",
-        },
-        {
-            id: "5",
-            title: "Lion king",
-            owner: "King Arthur",
-            image: "images/art.png",
-        },
-
-
-    ]
+    
     const categories:string[] = [
         "Painting",
         "3D arts",

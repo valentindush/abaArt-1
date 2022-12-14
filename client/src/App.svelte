@@ -1,8 +1,8 @@
 <script lang="ts">
 import Router from 'svelte-spa-router';
+  import ArtPage from './Pages/ArtPage/ArtPage.svelte';
 import Home from './Pages/Home/Home.svelte';
 import Login from './Pages/Login/Login.svelte';
-import ArtPage from './Pages/Main/ArtPage.svelte';
 import Main from './Pages/Main/Main.svelte';
 import SignUp from './Pages/SignUp/signUp.svelte';
 
@@ -11,7 +11,7 @@ const routes:object = {
     '/login':Login,
     '/signup':SignUp,
     '/home': Main,
-    '/home/:id': ArtPage,
+    '/art/:id': ArtPage,
   
 };
 </script>
