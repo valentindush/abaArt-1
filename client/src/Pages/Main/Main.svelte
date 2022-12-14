@@ -57,12 +57,16 @@
         activeCat = value;
     }
 
-    let showProfile:boolean = false;
-    let showAddArt:boolean = false;
-    let showNotifications:boolean = false;
+    let showProfile = false
+    let showAddArt = false
+    let showNotifications = false
+    let showChat = false
 
     const closeProfile = ()=>showProfile = !showProfile;
     const closeAddArt = ()=> showAddArt = !showAddArt
+    const closeNotification = ()=> showNotifications = !showNotifications
+    const closeChat = ()=> showChat = !showChat
+
 
 
 </script>
@@ -93,55 +97,60 @@
 
     <div class="content mt-24">
 
-        <div class="">
-            <div class="title">
-                <h2 class="text-gray-200 text-2xl">Now trending</h2>
-            </div>
-            <div class=" sm:block flex items-center justify-start gap-1 flex-wrap py-3">
-                {#each arts as art}
-                    <Art {art} />
-                    {:else}
-                        <p class="text-red-500 p-2">Something went wrong</p>
-                        
-                {/each}
-            </div>
-            
-        </div>
-        <div class="mt-4">
-            <div class="title">
-                <h2 class="text-gray-200 text-2xl">Most popular</h2>
-            </div>
-            <div class=" sm:block flex items-center justify-start gap-1 flex-wrap py-3">
-                {#each arts as art}
-                    <Art {art} />
-                    {:else}
-                        <p class="text-red-500 p-2">Something went wrong</p>
-                        
-                {/each}
-            </div>
-            
-        </div>
-        <div class="mt-4">
-            <div class="title">
-                <h2 class="text-gray-200 text-2xl">Choose by categories</h2>
-                <div class="catgrs py-4">
-                    {#each categories as category}
-                        <button on:click={()=>chooseCategory(category)} class={`py-2 px-5 rounded-full ${activeCat === category?"bg-pink-500 bg-opacity-60":"bg-white bg-opacity-20"} inline-block mr-2 cursor-pointer active:scale-[.97] border border-pink-500 border-opacity-50 mt-3`}>
-                            <p class="text-gray-200 text-center">{category}</p>
-                        </button>
+        {#if arts.length !== 0}
+            <div class="">
+                <div class="title">
+                    <h2 class="text-gray-200 text-2xl">Now trending</h2>
+                </div>
+                <div class=" sm:block flex items-center justify-start gap-1 flex-wrap py-3">
+                    {#each arts as art}
+                        <Art {art} />
+                        {:else}
+                            <p class="text-red-500 p-2 font-bold text-2xl">Something went wrong</p>
+                            
                     {/each}
                 </div>
+                
             </div>
-            <div class=" sm:block flex items-center justify-start gap-1 flex-wrap py-3">
-                {#each arts as art}
-                    <Art {art} />
-                    {:else}
-                        <p class="text-red-500 p-2">Something went wrong</p>
-                        
-                {/each}
+            <div class="mt-4">
+                <div class="title">
+                    <h2 class="text-gray-200 text-2xl">Most popular</h2>
+                </div>
+                <div class=" sm:block flex items-center justify-start gap-1 flex-wrap py-3">
+                    {#each arts as art}
+                        <Art {art} />
+                        {:else}
+                            <p class="text-red-500 p-2 font-bold text-2xl">Something went wrong</p>
+                            
+                    {/each}
+                </div>
+                
             </div>
-            
-        </div>
+            <div class="mt-4">
+                <div class="title">
+                    <h2 class="text-gray-200 text-2xl">Choose by categories</h2>
+                    <div class="catgrs py-4">
+                        {#each categories as category}
+                            <button on:click={()=>chooseCategory(category)} class={`py-2 px-5 rounded-full ${activeCat === category?"bg-pink-500 bg-opacity-60":"bg-white bg-opacity-20"} inline-block mr-2 cursor-pointer active:scale-[.97] border border-pink-500 border-opacity-50 mt-3`}>
+                                <p class="text-gray-200 text-center">{category}</p>
+                            </button>
+                        {/each}
+                    </div>
+                </div>
+                <div class=" sm:block flex items-center justify-start gap-1 flex-wrap py-3">
+                    {#each arts as art}
+                        <Art {art} />
+                        {:else}
+                            <p class="text-red-400 p-2 font-bold text-2xl">Something went wrong</p>
+                            
+                    {/each}
+                </div>
+                
+            </div>
+            {:else}
+            <p class="text-red-500 p-2 font-semibold text-2xl">Ooops. Something went wrong while loading the arts</p>
+
+        {/if}
 
     </div>
 

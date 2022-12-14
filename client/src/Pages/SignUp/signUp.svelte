@@ -51,7 +51,7 @@
                       </div>
                   {/if}
   
-                  <button type="submit" class="bg-[#372439] py-2 w-full text-white rounded-lg active:scale-95 mt-4">Log in</button>
+                  <button type="submit" class="bg-[#372439] py-2 w-full text-white rounded-lg active:scale-95 mt-4">Create account</button>
                   <p class="text-gray-200 text-md text-center mt-3">Or <a class="text-blue-400 hover:underline" href="/#/login">login</a></p>
               </form>
           </div>

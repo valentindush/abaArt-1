@@ -53,9 +53,9 @@
     }
 </script>
 <main class="bg-black w-screen h-screen z-40 fixed top-0 left-0 bg-opacity-70">
-    <div class="bg-white bg-opacity-70 m-auto w-[35rem] rounded-lg p-4 font-bold text-center relative mt-12">
+    <div class="bg-white bg-opacity-20 backdrop-blur-sm m-auto w-[35rem] rounded-lg p-4 font-bold text-center relative mt-12">
         <button on:click={close} class="btn-close absolute opacity-80 right-2 top-1 active:scale-[.97]" title="close" >
-            <Icon src={RiSystemCloseCircleLine} size='30' color='red' />
+            <Icon src={RiSystemCloseCircleLine} size='30' color='#f06c62' />
         </button>
         <h2 class="text-3xl">Share yout art</h2>
         
