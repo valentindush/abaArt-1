@@ -8,7 +8,7 @@
                 <img src="./images/logo.svg" alt="Logo here">
             </div>
             <div class="links text-gray-200 text-lg py-2 z-10 flex gap-2">
-                <a href="#/" class=" p-2 active:scale-95">Home</a>
+                <a href="#/home" class=" p-2 active:scale-95">Home</a>
                 <a href="#/" class=" p-2 active:scale-95">Contact us</a>
                 <a href="#/login" class=" px-4 py-2 rounded-lg active:scale-95 bg-[#372439] ml-12">Sign in</a>
             </div>
