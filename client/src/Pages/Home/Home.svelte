@@ -14,10 +14,10 @@
             </div>
         </nav>
         <div class="img absolute right-0 top-0  ">
-            <img src="./images/image 1.png" class="object-cover brightness-[.4]" alt="">
-            <img src="./images/image 4.png" class="scale-75 object-cover absolute top-[15rem] brightness-[.4]" alt="">
+            <img src="./images/image 1.png" class="object-cover mid:brightness-[.4]" alt="">
+            <img src="./images/image 4.png" class="scale-75 object-cover absolute top-[15rem] mid:brightness-[.4]" alt="">
     
-            <img src="./images/image 3.png" class="scale-75 object-cover absolute top-24 -left-[10rem] brightness-[.4]" alt="">
+            <img src="./images/image 3.png" class="scale-75 object-cover absolute top-24 -left-[10rem] mid:brightness-[.4]" alt="">
         </div>
         <div class="relative z-10 px-10 md:p-2 h-fit">
             <header class="pt-24 px-5">
