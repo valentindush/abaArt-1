@@ -10,7 +10,6 @@
     import Login from "../Login/Login.svelte";
     import AddArt from "../Main/AddArt.svelte";;
     import { arts } from "../../assets/Arts";
-
     let showProfile = false
     let showAddArt = false
     let showNotifications = false
@@ -21,6 +20,15 @@
     const closeNotification = ()=> showNotifications = !showNotifications
     const closeChat = ()=> showChat = !showChat
 
+    export let params = {id: ''}
+
+    const id = parseInt(params.id)
+    
+    const art = arts[id]||arts[0]
+    const date = new Date()
+
+    
+    
 
 </script>
 
@@ -48,14 +56,43 @@
             </div>
         </div>
     </header>
-    <div class="px-8 mt-24">
-        <div class="flex gap-2">
-            <div class="media">
+    <div class="px-5 mt-24">
+        <div class="flex gap-5 justify-between h-[calc(100vh-200px)] md:h-full md:flex-wrap">
+            <div class="media w-full">
                 <img class="w-full h-full object-cover rounded-xl" src="../images/art.png" alt="">
             </div>
-            <div class="info max-w-[400px] w-[300px]">
-                <h2 class="text-xl font-medium text-gray-300 ">Art details</h2>
+            <div class="info max-w-[400px] w-full bg-black p-6 rounded-xl bg-opacity-40 relative md:max-w-full md:w-full">
+                <h2 class="text-2xl font-semibold text-gray-300 ">Art details</h2>
+
+                <div class="mt-3">
+                    <p class="text-gray-300 text-xl mt-3">Name: {art.title}</p>
+                    <p class="text-gray-300 text-xl mt-3">Owner: {art.owner}</p>
+                    <p class="text-gray-300 text-xl mt-3">Type: {art.image.split('.')[1]}</p>
+                    <p class="text-gray-300 text-xl mt-3">Name: {art.title}</p>
+                </div>
+
+                <div class="mt-6">
+                    <button class="text-gray-300 bg-black bg-opacity-40  py-3 px-7 active:scale-[1.04] rounded-lg">Download</button>
+                </div>
+                <div class="absolute bottom-2 md:right-3">
+                    <p class="text-2xl text-gray-300">&copy; {art.owner} {date.getFullYear()}</p>
+                </div>
             </div>
+            
+        </div>
+        <div class="mt-8 pb-4">
+            <div class="title">
+                <h2 class="text-gray-200 text-2xl">You may also like</h2>
+            </div>
+            <div class="sm:block flex items-center justify-start gap-4 flex-wrap py-3 mt-2">
+                {#each arts as art}
+                    <Art {art} />
+                    {:else}
+                        <p class="text-red-500 p-2 font-bold text-2xl">Something went wrong</p>
+                        
+                {/each}
+            </div>
+            
         </div>
     </div>
     {#if showProfile}

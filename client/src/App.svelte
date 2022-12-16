@@ -4,6 +4,7 @@ import Router from 'svelte-spa-router';
 import Home from './Pages/Home/Home.svelte';
 import Login from './Pages/Login/Login.svelte';
 import Main from './Pages/Main/Main.svelte';
+  import NotFound from './Pages/NotFound/NotFound.svelte';
 import SignUp from './Pages/SignUp/signUp.svelte';
 
 const routes:object = {
@@ -12,6 +13,7 @@ const routes:object = {
     '/signup':SignUp,
     '/home': Main,
     '/art/:id': ArtPage,
+    '*': NotFound
   
 };
 </script>

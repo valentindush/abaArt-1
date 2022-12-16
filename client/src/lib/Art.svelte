@@ -6,7 +6,7 @@ export let art : {
     image: string,
     };
 </script>
-<div class="max-h-[250px] h-[250px] w-[280px] sm:w-full sm:mt-2">
+<div class="max-h-[250px] h-[250px] w-[280px] sm:w-full mt-4">
     <a href={`#/art/${art.id}`} class="">
         <div class="h-[83%]">
             <img src={art.image} class="w-full h-full object-cover rounded-lg" alt="">
