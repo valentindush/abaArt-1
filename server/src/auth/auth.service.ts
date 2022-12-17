@@ -6,6 +6,7 @@ import * as bcrypt from 'bcrypt'
 import { JwtService } from '@nestjs/jwt';
 import { jwtSecret } from 'src/utils/constants';
 import { sign } from 'crypto';
+import { Request, Response } from 'express';
 
 @Injectable()
 export class AuthService {
@@ -38,7 +39,9 @@ export class AuthService {
          }
       }
    }
-   async signin(body: SigninDto) {
+
+
+   async signin(body: SigninDto, req: Request, res: Response) {
       const {email, password} = body
 
       const foundUser = await this.prisma.user.findUnique({where: {email: email}})
@@ -52,18 +55,23 @@ export class AuthService {
          throw new BadRequestException("Incorrect email or password")
       }
 
-      const signed = await this.signToken({id: foundUser.id, email:foundUser.email})
+      const token = await this.signToken({id: foundUser.id, email:foundUser.email})
 
-      return {
+      res.cookie('token',token)
+
+      return res.json({
          status: true,
          message: "Login Successfull",
-         token: signed
-      }
+      })
 
    }
 
-   async signout(){
-
+   async signout(req: Request, res: Response){
+      res.clearCookie('token')
+      return res.json({
+         status: true,
+         message: "Logged out "
+      })
    }
 
   async hashPassword (password:string){
