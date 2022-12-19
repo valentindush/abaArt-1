@@ -24,6 +24,7 @@ model Posts {
   id      String @unique @default(uuid())
   userId  String @unique
   fileUrl String
+  title String
   downloads Int
   user    User   @relation(fields: [userId], references: [id])
 }
