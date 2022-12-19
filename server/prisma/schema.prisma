@@ -11,12 +11,19 @@ datasource db {
 }
 
 model User {
-  id        String   @default(uuid())
-  email     String   @unique
-  fullName  String 
-  hashedPassword String 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id             String   @unique @default(uuid())
+  email          String   @unique
+  fullName       String
+  hashedPassword String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  Posts          Posts[]
 }
 
-
+model Posts {
+  id      String @unique @default(uuid())
+  userId  String @unique
+  fileUrl String
+  downloads Int
+  user    User   @relation(fields: [userId], references: [id])
+}
